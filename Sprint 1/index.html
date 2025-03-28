@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>MedTrack</title>
+</head>
+<body>
+<div class="nav">
+  <div class="nav-title">
+    <img src="eco.jpg" alt="Name Logo" class="nav-logo">
+    <h1>MedTrack</h1>
+  </div>
+  <div class="nav-buttons">
+    <button><a href="#form">Here</a></button>
+    <button><a href="#about">About</a></button>
+    <button><a href="#faq">FAQ</a></button>
+    <button id="login-toggle">Login/Register</button>
+  </div>
+</div>
+<div class="content">
+  <button id="mission-title" class="mission-button">Our Mission</button>
+  <p id="mission-statement" class="mission-statement">At Name, we believe in a sustainable future. </p>
+</div>
+<div class="about">
+  <div>
+    <h2 id="about">About</h2>
+    <div class="disc">
+      <p>
+        At MedTrack we believe in easy ways to track and manage your medication.
+      </p>
+      <p>
+        Nobody should have to use a multitude of apps to keep track of simple routines.
+      </p>
+      <p>
+        MedTrack was created to combine those many apps into an easy-to-use way to track your medication.
+      </p>
+    </div>
+  </div>
+  <button id="form-button" class="form-button">Form</button>
+  <div id="form-container" class="form-container" style="display: none;">
+    <form id="LogIn-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="message">Symptoms:</label><br>
+      <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+
+<!-- Login and Register Modal -->
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <div class="form-switch">
+      <button id="show-login" class="active">Login</button>
+      <button id="show-register">Register</button>
+      <button id="show-provider-register">Provider</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="login-form" class="auth-form">
+      <label for="login-username">Username:</label>
+      <input type="text" id="login-username" name="username" required><br><br>
+      <label for="login-password">Password:</label>
+      <input type="password" id="login-password" name="password" required><br><br>
+      <input type="submit" value="Login">
+    </form>
+
+    <!-- Register Form (Initially Hidden) -->
+    <form id="register-form" class="auth-form" style="display: none;">
+      <label for="register-username">Username:</label>
+      <input type="text" id="register-username" name="new-username" required><br><br>
+      <label for="register-email">Email:</label>
+      <input type="email" id="register-email" name="email" required><br><br>
+      <label for="register-password">Password:</label>
+      <input type="password" id="register-password" name="new-password" required><br><br>
+      <label for="register-confirm-password">Confirm Password:</label>
+      <input type="password" id="register-confirm-password" name="confirm-password" required><br><br>
+      <input type="submit" value="Register">
+    </form>
+
+    <form id="Provider-Register-Form" class="auth-form" style="display: none;">
+      <label for="provider-id">ID#:</label>
+      <input type="text" id="provider-id" name="provider-id" required><br><br>
+      <label for="provider-username">Username:</label>
+      <input type="text" id="provider-username" name="new-username" required><br><br>
+      <label for="provider-email">Email:</label>
+      <input type="email" id="provider-email" name="email" required><br><br>
+      <label for="provider-password">Password:</label>
+      <input type="password" id="provider-password" name="new-password" required><br><br>
+      <label for="provider-confirm-password">Confirm Password:</label>
+      <input type="password" id="provider-confirm-password" name="confirm-password" required><br><br>
+      <input type="submit" value="Register">
+    </form>
+
+    <p id="auth-message" class="auth-message"></p>
+  </div>
+</div>
+</body>
+</html>
